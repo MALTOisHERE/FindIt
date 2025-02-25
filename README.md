@@ -4,13 +4,13 @@ This project is a web application that efficiently loads and displays a large so
 
 ## Features
 
-- Backend:
+- **Backend:**
 
     Preprocesses a large users.txt file to create an index (index.json).
 
     Provides an API to fetch users by their starting letter (A-Z).
 
-- Frontend:
+- **Frontend:**
 
     Displays alphabet buttons to select a letter.
 
@@ -21,17 +21,17 @@ This project is a web application that efficiently loads and displays a large so
 
 ## Technologies Used
 
-- *Backend:* Node.js, Express
+- **Backend:** Node.js, Express
 
-- *Frontend:* React, react-window
+- **Frontend:** React, react-window
 
-- *File Handling*: fs, readline (Node.js modules)
+- **File Handling**: fs, readline (Node.js modules)
 
 
 ## Project Structure
 
 ```bash 
-large-list-app/
+FindIt/
 ├── backend/
 │   ├── preprocess.js       # Preprocesses users.txt to create index.json
 │   ├── server.js           # Backend API to fetch users
@@ -42,8 +42,7 @@ large-list-app/
 │   │   ├── App.js          # Main React component
 │   │   ├── App.css         # Styles for the app
 │   │   └── index.js        # Entry point for the React app
-│   ├── package.json        # Frontend dependencies
-│   └── README.md           # Frontend documentation
+│   └── package.json        # Frontend dependencies
 └── README.md               # Project documentation (this file)
 ```
 
@@ -105,45 +104,45 @@ The frontend will run on ```http://localhost:3000```.
 
 ## How It Works
 
-### Backend
+### 1. Backend
 
-#### Preprocessing:
+#### a. Preprocessing:
 
-    Reads users.txt line by line.
+- Reads users.txt line by line.
 
-    Creates an index (index.json) with metadata for each letter (A-Z):
+- Creates an index (index.json) with metadata for each letter (A-Z):
 
-    _startOffset:_ Starting position of the letter in the file.
+- **startOffset:** Starting position of the letter in the file.
 
-    _endOffset:_ Ending position of the letter in the file.
+- **endOffset:** Ending position of the letter in the file.
 
-    _count:_ Number of users for the letter.
+- **count:** Number of users for the letter.
 
-#### API Endpoints:
+#### b. API Endpoints:
 
-    */api/count/:letter:* Returns the total number of users for a letter.
+- **/api/count/:letter:** Returns the total number of users for a letter.
 
-    */api/users:* Fetches users for a letter (supports pagination).
+- **/api/users:** Fetches users for a letter (supports pagination).
 
-### Frontend
+### 2. Frontend
 
-#### Alphabet Menu:
+#### a. Alphabet Menu:
 
-    Displays buttons for each letter (A-Z).
+- Displays buttons for each letter (A-Z).
 
-    Clicking a button fetches users starting with that letter.
+- Clicking a button fetches users starting with that letter.
 
-#### Search Bar:
+#### b. Search Bar:
 
-    Filters the displayed users by name in real-time.
+- Filters the displayed users by name in real-time.
 
-    Works locally (no additional API calls).
+- Works locally (no additional API calls).
 
-#### Virtualized List:
+#### c. Virtualized List:
 
-    Uses react-window to render only visible rows (saves memory for large lists).
+- Uses react-window to render only visible rows (saves memory for large lists).
 
-    Automatically loads more users as you scroll.
+- Automatically loads more users as you scroll.
 
 
 
