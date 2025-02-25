@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+
+# Generated index file
+index.json
+
+# Environment variables
+.env
+
+# Log files
+*.log
+npm-debug.log*
+
+# IDE-specific files
+.vscode/
+.idea/
+
+# macOS system files
+.DS_Store
+
+# Build artifacts (if any)
+dist/
+build/
