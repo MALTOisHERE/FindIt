@@ -27,6 +27,15 @@ This project is a web application that efficiently loads and displays a large so
 
 - **File Handling**: fs, readline (Node.js modules)
 
+## Clone Instructions
+
+To get started, clone the repository to your local machine using the following command:
+
+```bash 
+git clone https://github.com/MALTOisHERE/FindIt.git
+cd FindIt
+```
+
 
 ## Project Structure
 
